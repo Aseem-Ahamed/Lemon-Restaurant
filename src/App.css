@@ -525,3 +525,140 @@ Review text
   text-decoration: none;
   color: black;
 }
+
+/* ===========================
+   MOBILE (<= 768px)
+=========================== */
+
+@media (max-width: 768px) {
+  /* HEADER */
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* HERO */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    position: static;
+    margin-top: 2rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* SPECIALS */
+  .specials-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .special-card {
+    max-width: 100%;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
+
+  /* ABOUT */
+  .about-container {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .about-images {
+    position: static;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .img-front,
+  .img-back {
+    position: static;
+    width: 45%;
+    height: auto;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+/* ===========================
+   TABLET (<= 1024px)
+=========================== */
+
+@media (max-width: 1024px) {
+  /* HERO */
+  .hero-container {
+    align-items: center;
+  }
+
+  .hero-image img {
+    width: 300px;
+    height: 380px;
+  }
+
+  /* SPECIALS */
+  .specials-cards {
+    gap: 1.5rem;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    max-width: 45%;
+  }
+
+  /* ABOUT */
+  .about-images {
+    width: 350px;
+    height: 320px;
+  }
+
+  .img-front,
+  .img-back {
+    width: 220px;
+    height: 280px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    gap: 2rem;
+  }
+}
