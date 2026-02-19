@@ -8,7 +8,7 @@ import Star from "../assets/star.jpg";
 function CustomersSay() {
     return (
         <section className="testimonials">
-            <div className="container">
+            <div className="testimonial-container">
                 <h2>Testimonials</h2>
 
                 <div className="testimonial-cards">

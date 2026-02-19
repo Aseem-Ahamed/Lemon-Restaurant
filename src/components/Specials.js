@@ -5,7 +5,7 @@ import dessert from "../assets/lemon dessert.jpg";
 function Specials() {
     return (
         <section className="specials">
-            <div className="container">
+            <div className="specials-container">
 
                 <div className="specials-header">
                     <h2>This week’s specials!</h2>

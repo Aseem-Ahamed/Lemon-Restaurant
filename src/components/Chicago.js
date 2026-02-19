@@ -4,7 +4,7 @@ import ChefB from "../assets/Mario and Adrian A.jpg";
 function Chicago() {
     return (
         <section className="about">
-            <div className="container about-container">
+            <div className="chicago-container about-container">
 
                 <div className="about-text">
                     <h2>Little Lemon</h2>
