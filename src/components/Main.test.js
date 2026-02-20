@@ -1,9 +1,12 @@
 import { initializeTimes, updateTimes } from "./Main";
+import * as api from "../api";
+
+jest.mock("../api");
 
 describe("Reducer functions", () => {
 
     beforeEach(() => {
-        global.fetchAPI = jest.fn(() => [
+        api.fetchAPI.mockReturnValue([
             "17:00",
             "18:00",
             "19:00"
@@ -13,7 +16,7 @@ describe("Reducer functions", () => {
     test("initializeTimes returns available times from fetchAPI", () => {
         const result = initializeTimes();
 
-        expect(global.fetchAPI).toHaveBeenCalled();
+        expect(api.fetchAPI).toHaveBeenCalled();
         expect(result).toEqual([
             "17:00",
             "18:00",
@@ -31,12 +34,11 @@ describe("Reducer functions", () => {
 
         const result = updateTimes(state, action);
 
-        expect(global.fetchAPI).toHaveBeenCalledWith(new Date("2026-02-20"));
+        expect(api.fetchAPI).toHaveBeenCalledWith(new Date("2026-02-20"));
         expect(result).toEqual([
             "17:00",
             "18:00",
             "19:00"
         ]);
     });
-
 });
